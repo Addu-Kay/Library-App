@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* header */
+header {
+    padding-left: 150px;
+    padding-right: 150px;
+    background: linear-gradient(45deg, #E49BFF 0%, #C738BD 50%, #850F8D 100%);
+}
+
+.navbar {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.navbar span {
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.row .row {
+    gap: 2px;
+}
+
+#add-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* main */
+main {
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 16px;
+    color: white;
+}
+
+#book-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+
+/* template */
+.book-details {
+    display: inline-grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: max-content 40px max-content;
+    background-color: #C738BD;
+    border: 4px solid #E49BFF;
+    border-radius: 5px;
+    row-gap: 10px;
+    padding: 20px;
+    align-items: center;
+    max-width: 250px;
+}
+
+.book-title,
+.book-author {
+    width: 120px;
+}
+
+
+.checkbox {
+    align-self: center;
+}
+
+.colon {
+    justify-self: center;
+}
+
+.delete {
+    grid-column-start: 3;
+    justify-self: end;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input {
+    display: block;
+}
+
+/* dialog */
+#modal {
+    border: 0;
+    background: linear-gradient(50deg, #5a189a 0%, #7b2cbf 50%, #9d4edd 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#modal::backdrop {
+    background: rgb(0 0 0 / 0.7);
+}
+
+#modal button,
+#modal {
+    color: white;
+}
+
+#modal button {
+    height: 25px;
+    width: 60px;
+    background: linear-gradient(to right, #3c096c 0%, #240046 50%, #10002b 100%);
+    border: 1px solid #10002b;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+#modal input {
+    margin-bottom: 10px;
+}
+
+#modal input:last-child {
+    margin-bottom: 0;
+}
+
+#modal .row {
+    margin-bottom: 10px;
+}
+
+#modal input[type="checkbox"],
+#modal button {
+    cursor: pointer;
+}
